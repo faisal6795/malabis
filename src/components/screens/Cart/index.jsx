@@ -10,8 +10,6 @@ import emptyImage from '../../../assets/images/empty_cart.svg';
 import { ACTION } from '../../../constants';
 import { LanguageContext } from '../../../containers/Language';
 
-const messageBird = require('messagebird')('91rjXxmdgjYNNA5Sn0BT4P3Hl');
-
 function Cart() {
 
     const { dictionary } = useContext(LanguageContext);
@@ -57,17 +55,7 @@ function Cart() {
         });
 
         body += '\nTotal: ' + addCommaToDigits(total);
-
-        const params = {
-            'originator': 'MessageBird',
-            'recipients': ['+918976513089'],
-            'body': body
-        };
-
-        // messageBird.messages.create(params, (err, res) => {
-        //     if (err) return console.log(err);
-        //     console.log(res);
-        // });
+        console.log(body);
     }
 
     function closePopup() {
