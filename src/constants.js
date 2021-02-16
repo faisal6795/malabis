@@ -1,8 +1,31 @@
-import saree1 from './assets/images/saree1.jpg';
-import saree2 from './assets/images/saree2.webp';
-import saree3 from './assets/images/saree3.webp';
-import saree4 from './assets/images/saree4.webp';
-import saree5 from './assets/images/saree5.webp';
+import blendSilk1 from './assets/images/products/blend-silk-1.jpg';
+import blendSilk2 from './assets/images/products/blend-silk-2.jpg';
+import blueBana1 from './assets/images/products/blue-bana-1.jpg';
+import blueBana2 from './assets/images/products/blue-bana-2.jpg';
+import blueTanchui1 from './assets/images/products/blue-tanchui-1.jpg';
+import blueTanchui2 from './assets/images/products/blue-tanchui-2.jpg';
+import blueZari1 from './assets/images/products/blue-zari-1.jpg';
+import blueZari2 from './assets/images/products/blue-zari-2.jpg';
+import chikuKanjee1 from './assets/images/products/chiku-kanjee-1.jpg';
+import chikuKanjee2 from './assets/images/products/chiku-kanjee-2.jpg';
+import goldKanjee1 from './assets/images/products/gold-kanjee-1.jpg';
+import goldKanjee2 from './assets/images/products/gold-kanjee-2.jpg';
+import goldTissu1 from './assets/images/products/gold-tissu-1.jpg';
+import goldTissu2 from './assets/images/products/gold-tissu-2.jpg';
+import kotaResham1 from './assets/images/products/kota-resham-1.jpg';
+import kotaResham2 from './assets/images/products/kota-resham-2.jpg';
+import kotaZari1 from './assets/images/products/kota-zari-1.jpg';
+import kotaZari2 from './assets/images/products/kota-zari-2.jpg';
+import redTanchui1 from './assets/images/products/red-tanchui-1.jpg';
+import redTanchui2 from './assets/images/products/red-tanchui-2.jpg';
+import silkKanjee1 from './assets/images/products/silk-kanjee-1.jpg';
+import silkKanjee2 from './assets/images/products/silk-kanjee-2.jpg';
+import silkyBana1 from './assets/images/products/silky-bana-1.jpg';
+import silkyBana2 from './assets/images/products/silky-bana-2.jpg';
+import whiteZari1 from './assets/images/products/white-zari-1.jpg';
+import whiteZari2 from './assets/images/products/white-zari-2.jpg';
+import yellowTanchui1 from './assets/images/products/yellow-tanchui-1.jpg';
+import yellowTanchui2 from './assets/images/products/yellow-tanchui-2.jpg';
 
 export const COLORS = {
     text: "#222222",
@@ -121,79 +144,130 @@ export const initialData = {
     products: [
         {
             id: 'prod-1',
-            name: 'Kerala saree',
-            price: 200,
-            original: 300,
-            images: [saree1, saree2, saree3],
+            name: 'Designer white zari silky saree',
+            price: 1499,
+            original: 1700,
+            images: [whiteZari1, whiteZari2],
             quantity: 100,
             isFav: false,
             isCart: false,
-            details: {
-                dimensions: '200 x 200 x 1.5 cms',
-                pattern: 'Polka dots',
-                fabric: 'Cotton',
-                color: 'Red',
-            }
         }, {
             id: 'prod-2',
-            name: 'Banarasi saree',
-            price: 500,
-            original: 700,
-            images: [saree4, saree2, saree3],
+            name: 'Kota check woven zari buta saree with contrast border',
+            price: 995,
+            original: 1200,
+            images: [kotaZari1, kotaZari2],
             quantity: 100,
             isFav: false,
             isCart: false,
-            details: {
-                dimensions: '200 x 200 x 1.5 cms',
-                pattern: 'Polka dots',
-                fabric: 'Cotton',
-                color: 'Red',
-            }
         }, {
             id: 'prod-3',
-            name: 'Lucknow saree',
-            price: 400,
-            original: 500,
-            images: [saree2, saree5, saree3],
+            name: 'Kota check woven resham buta saree',
+            price: 995,
+            original: 1200,
+            images: [kotaResham1, kotaResham2],
             quantity: 100,
             isFav: false,
             isCart: false,
-            details: {
-                dimensions: '200 x 200 x 1.5 cms',
-                pattern: 'Polka dots',
-                fabric: 'Cotton',
-                color: 'Red',
-            }
         }, {
             id: 'prod-4',
-            name: 'Maharashtra saree',
-            price: 800,
-            original: 900,
-            images: [saree5, saree2, saree4],
+            name: 'Golden zari tissu silk blend woven design kanjeevaram saree',
+            price: 1899,
+            original: 2300,
+            images: [goldTissu1, goldTissu2],
             quantity: 100,
             isFav: false,
             isCart: false,
-            details: {
-                dimensions: '200 x 200 x 1.5 cms',
-                pattern: 'Polka dots',
-                fabric: 'Cotton',
-                color: 'Red',
-            }
         }, {
             id: 'prod-5',
-            name: 'Bengali saree',
-            price: 700,
-            original: 800,
-            images: [saree3, saree2, saree5],
+            name: 'Chiku zari woven design kanjeevaram saree',
+            price: 1799,
+            original: 2100,
+            images: [chikuKanjee1, chikuKanjee2],
             quantity: 100,
             isFav: false,
             isCart: false,
-            details: {
-                dimensions: '200 x 200 x 1.5 cms',
-                pattern: 'Polka dots',
-                fabric: 'Cotton',
-                color: 'Red',
-            }
+        }, {
+            id: 'prod-6',
+            name: 'Yellow Silky tanchui woven saree',
+            price: 1099,
+            original: 1300,
+            images: [yellowTanchui1, yellowTanchui2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-7',
+            name: 'Red Silky tanchui woven saree',
+            price: 1099,
+            original: 1300,
+            images: [redTanchui1, redTanchui2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-8',
+            name: 'Blue Silky tanchui woven saree',
+            price: 1099,
+            original: 1300,
+            images: [blueTanchui1, blueTanchui2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-9',
+            name: 'Blend silk woven tissu saree',
+            price: 1595,
+            original: 1800,
+            images: [blendSilk1, blendSilk2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-10',
+            name: 'Silk blend woven design kanjeevaram saree with contrast border',
+            price: 1899,
+            original: 2300,
+            images: [silkKanjee1, silkKanjee2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-11',
+            name: 'Golden silk blend woven design kanjeevaram saree with contrast border',
+            price: 1899,
+            original: 2300,
+            images: [goldKanjee1, goldKanjee2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-12',
+            name: 'Silky tissu banarasi saree with contrast border',
+            price: 1499,
+            original: 1700,
+            images: [silkyBana1, silkyBana2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-13',
+            name: 'Blue silky tissu banarasi saree with contrast border',
+            price: 1499,
+            original: 1700,
+            images: [blueBana1, blueBana2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
+        }, {
+            id: 'prod-14',
+            name: 'Blue silky woven golden zari border banarasi saree',
+            price: 1295,
+            original: 1500,
+            images: [blueZari1, blueZari2],
+            quantity: 100,
+            isFav: false,
+            isCart: false,
         },
     ]
 }

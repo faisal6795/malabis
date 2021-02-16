@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import ToggleBtn from '../../shared/ToggleBtn';
 import Counter from '../../shared/Counter';
 import Button from '../../shared/Button';
-import Details from '../../layout/Details';
 import Slideshow from '../../layout/Slideshow';
 import { StyledOriginalPrice, StyledSmallWrapper, StyledProductName, StyledProductPrice, StyledProductWrapper, StyledProductContainer } from './Product.styles';
 import { ACTION } from '../../../constants';
@@ -13,7 +12,7 @@ function Product() {
 
     const { dictionary } = useContext(LanguageContext);
     const currentProductId = useSelector(state => state.currentProduct);
-    const { id, name, price, original, images, quantity, details, isFav, isCart } =
+    const { id, name, price, original, images, quantity, isFav, isCart } =
         useSelector(state => state.products).filter(item => item.id === currentProductId)[0];
     const dispatch = useDispatch();
     const [isRetail, setRetail] = useState(false);
@@ -66,7 +65,6 @@ function Product() {
                 isDisable={isCart}
                 customClass='btn'
             />
-            <Details data={details} />
         </StyledProductContainer>
     </StyledProductWrapper>
 }
