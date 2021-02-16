@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import emailjs, { init } from 'emailjs-com';
 import CartCard from '../../layout/CartCard';
 import BottomBar from '../../layout/BottomBar';
 import Popup from '../../layout/Popup';
@@ -7,11 +8,12 @@ import Success from '../../layout/Success';
 import EmptyState from '../../layout/EmptyState';
 import { StyledCartCardsContainer, StyledCartTitle, StyledCartWrapper } from './Cart.styles';
 import emptyImage from '../../../assets/images/empty_cart.svg';
-import { ACTION } from '../../../constants';
+import { ACTION, DATA } from '../../../constants';
 import { LanguageContext } from '../../../containers/Language';
 
 function Cart() {
 
+    init(DATA.userId);
     const { dictionary } = useContext(LanguageContext);
     const [showPopup, setShowPopup] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
@@ -28,7 +30,7 @@ function Cart() {
     }
 
     function confirmOrder() {
-        sendSMS();
+        sendMail();
         closePopup();
         setShowSuccess(true);
         cartData.forEach(item => {
@@ -43,19 +45,24 @@ function Cart() {
         });
     }
 
-    function sendSMS() {
-        let body = 'Name: ' + firstName + ' ' + lastName + '\nPhone: ' + phone + '\nAddress: ' + address + '\n\nOrder:\n',
-            total = 0;
+    function sendMail() {
+        let body = `Name: ${firstName} ${lastName}\nPhone: ${phone}\nAddress: ${address}\n\nOrder:\n`, total = 0;
         const addCommaToDigits = (value) =>
             dictionary.rupeesSymbol + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(value);
 
         cartData.forEach(item => {
-            body += item.name + ' (' + item.quantity + ' x ' + dictionary.rupeesSymbol + item.price + ')\n';
+            body += `${item.name} (${item.quantity} x ${dictionary.rupeesSymbol}${item.price})\n`;
             total += item.quantity * item.price;
         });
 
         body += '\nTotal: ' + addCommaToDigits(total);
         console.log(body);
+
+        emailjs.send(DATA.serviceId, DATA.templateId, {
+            from_name: `${firstName} ${lastName}`,
+            to_name: DATA.shortName,
+            message: body,
+        });
     }
 
     function closePopup() {

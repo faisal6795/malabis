@@ -15,8 +15,12 @@ export const COLORS = {
 
 export const DATA = {
     name: 'Mr. Abu Nasir Ansari',
+    shortName: 'Abu Nasir',
     phone: "8976513089",
     whatsappLink: 'https://wa.me/91',
+    userId: 'user_JY31jYcMfHHsBaMLB2jKg',
+    serviceId: 'service_ypqe7q9',
+    templateId: 'template_yhftr8g',
 }
 
 export const ACTION = {
