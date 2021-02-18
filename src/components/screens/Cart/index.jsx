@@ -48,7 +48,7 @@ function Cart() {
     function sendMail() {
         let body = `Name: ${firstName} ${lastName}\nPhone: ${phone}\nAddress: ${address}\n\nOrder:\n`, total = 0;
         const addCommaToDigits = (value) =>
-            dictionary.rupeesSymbol + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(value);
+            dictionary.rupeesSymbol + new Intl.NumberFormat('en-IN').format(value);
 
         cartData.forEach(item => {
             body += `${item.name} (${item.quantity} x ${dictionary.rupeesSymbol}${item.price})\n`;

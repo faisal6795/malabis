@@ -8,7 +8,7 @@ function BottomBar({ totalQuantity, totalPrice, proceedToBuy }) {
 
     const { dictionary } = useContext(LanguageContext);
     const itemText = dictionary.selectedItems + '(' + totalQuantity + ')';
-    const priceText = dictionary.rupeesSymbol + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(totalPrice);
+    const priceText = dictionary.rupeesSymbol + new Intl.NumberFormat('en-IN').format(totalPrice);
 
     return <StyledBottomBarWrapper>
         <StyledBottomBarItems>{itemText}</StyledBottomBarItems>
