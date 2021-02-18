@@ -2,6 +2,7 @@ import styled from "styled-components";
 import heartIcon from '../../../assets/images/heart.svg';
 import cartIcon from '../../../assets/images/cart.svg';
 import hindiIcon from '../../../assets/images/hindi.svg';
+import logoIcon from '../../../assets/images/logo.svg';
 import { COLORS } from "../../../constants.js";
 
 export const StyledNavbarWrapper = styled.div`
@@ -23,13 +24,16 @@ export const StyledNavbarWrapper = styled.div`
 `;
 
 export const StyledLogo = styled.button`
-    background-color: ${COLORS.grey};
+    background: url(${logoIcon}) no-repeat left;
+    background-size: contain;
     cursor: pointer;
     height: 2rem;
-    width: 4rem;
+    font-weight: bold;
+    color: #fff;
     border: 0;
-    padding: 0;
     outline: 0;
+    padding: 0 1rem 0 2rem;
+    letter-spacing: 0.125rem;
 `;
 
 export const StyledRightContainer = styled.div`

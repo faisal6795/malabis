@@ -9,6 +9,7 @@ function Navbar() {
     const count = useSelector(state => state.products.filter(item => item.isCart).length);
     const { userLanguage, userLanguageChange } = useContext(LanguageContext);
     const [isEnglish, setEnglish] = useState(userLanguage === 'en');
+    const brandName = 'MALABIS';
 
     function switchLanguage() {
         setEnglish(!isEnglish);
@@ -17,7 +18,7 @@ function Navbar() {
 
     return <StyledNavbarWrapper >
         <Link to="/">
-            <StyledLogo />
+            <StyledLogo>{brandName}</StyledLogo>
         </Link>
         <StyledRightContainer>
             <StyledLanguage onClick={switchLanguage} className={isEnglish ? 'english' : ''}>A</StyledLanguage>
