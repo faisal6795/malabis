@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { DATA } from '../../../constants';
 import { StyledCart, StyledCartCounter, StyledFavourite, StyledLanguage, StyledLogo, StyledNavbarWrapper, StyledRightContainer } from './Navbar.styles';
 import { LanguageContext } from '../../../containers/Language';
 
@@ -9,7 +10,7 @@ function Navbar() {
     const count = useSelector(state => state.products.filter(item => item.isCart).length);
     const { userLanguage, userLanguageChange } = useContext(LanguageContext);
     const [isEnglish, setEnglish] = useState(userLanguage === 'en');
-    const brandName = 'MALABIS';
+    const brandName = DATA.brandName.split(' ')[0];
 
     function switchLanguage() {
         setEnglish(!isEnglish);

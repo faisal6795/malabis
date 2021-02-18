@@ -34,6 +34,7 @@ export const StyledLogo = styled.button`
     outline: 0;
     padding: 0 1rem 0 2rem;
     letter-spacing: 0.125rem;
+    text-transform: uppercase;
 `;
 
 export const StyledRightContainer = styled.div`

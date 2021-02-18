@@ -39,6 +39,7 @@ export const COLORS = {
 export const DATA = {
     name: 'Mr. Abu Nasir Ansari',
     shortName: 'Abu Nasir',
+    brandName: 'Malabis Collection',
     phone: "8976513089",
     whatsappLink: 'https://wa.me/91',
     userId: 'user_JY31jYcMfHHsBaMLB2jKg',
@@ -58,8 +59,6 @@ export const ACTION = {
 }
 
 export const ENGLISH = {
-    title: 'Malabis Collection',
-    bannerAltText: 'Banner image',
     search: 'Search',
     noResults: 'No results found',
     noResultsDesc: 'Try searching for something else',
@@ -97,8 +96,6 @@ export const ENGLISH = {
 }
 
 export const HINDI = {
-    title: 'मलाबिस कलेक्शन',
-    bannerAltText: 'बैनर की तस्वीर',
     search: 'खोज करें',
     noResults: 'कोई परिणाम नहीं मिला',
     noResultsDesc: 'कुछ और खोजने की कोशिश करिये',
