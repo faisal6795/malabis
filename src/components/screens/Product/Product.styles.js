@@ -11,6 +11,7 @@ export const StyledProductWrapper = styled.div`
 `;
 
 export const StyledProductName = styled.h2`
+    text-transform: capitalize;
     font-size: 1.5rem;
     margin: 0;
 

@@ -66,7 +66,7 @@ export const StyledLabel = styled.label`
 export const StyledProductImage = styled.div`
     border: 1px solid ${COLORS.grey};
     width: 100%;
-    height: 10rem;
+    height: 12rem;
     position: relative;
     margin: 0 auto;
     border-radius: 0.75rem;
@@ -81,9 +81,11 @@ export const StyledProductImage = styled.div`
 export const StyledProductName = styled.h3`
     margin: 0.5rem 0 0.25rem;
     font-size: 1rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-transform: capitalize;
 `;
 
 export const StyledProductPrice = styled.h4`

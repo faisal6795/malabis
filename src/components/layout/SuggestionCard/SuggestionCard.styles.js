@@ -42,6 +42,7 @@ export const StyledSuggestionTitle = styled.h6`
     font-weight: bold;
     margin: 0 0 0.25rem;
     white-space: normal;
+    max-width: 10rem;
 `;
 
 export const StyledSuggestionPrice = styled.span`

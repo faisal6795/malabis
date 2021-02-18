@@ -23,12 +23,12 @@ export const StyledSlideshowWrapper = styled.div`
 
 export const StyledImagesContainer = styled.div`
     width: 100%;
-    height: 90vw;
+    height: 130vw;
     padding-bottom: 1.5rem;
 
     @media only screen and (min-width: 1024px) {
         width: 40vw;
-        height: 40vw;
+        height: 56vw;
     }
 `;
 
