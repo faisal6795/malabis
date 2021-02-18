@@ -7,6 +7,10 @@ export const StyledWrapper = styled.div`
     background-color: ${COLORS.primary};
     padding: 1.5rem 1rem;
     color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
 
     &.hide {
         padding: 0.5rem;
@@ -23,37 +27,47 @@ export const StyledWrapper = styled.div`
     }
 `;
 
-export const StyledFooterLogo = styled.button`
+export const StyledFooterLogo = styled.img`
     display: inline-block;
-    height: 2.5rem;
-    width: 5rem;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    cursor: pointer;
+    vertical-align: middle;
+    height: 5rem;
+    width: auto;
 `;
 
-export const StyledFooterContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+export const StyledLogoContainer = styled.div`
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #fff;
 `;
 
-export const StyledLeftContainer = styled.div``;
-
-export const StyledFooterTitle = styled.h6`
+export const StyledLogoTitle = styled.span`
+    display: block;
+    font-weight: bold;
+    letter-spacing: 2px;
     font-size: 1.5rem;
-    margin: 0;
+`;
+
+export const StyledLogoSubtitle = styled.span`
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    margin-top: -0.125rem;
 `;
 
 export const StyledFooterDesc = styled.p`
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     margin: 0;
-    margin-top: 0.5rem;
-    white-space: pre;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+
+    & + p {
+        margin-top: 0.75rem;
+    }
 `;
 
-export const StyledRightContainer = styled.div``;
+export const StyledFooterContainer = styled.div``;
 
 const StyledIcon = styled.a`
     display: inline-block;
@@ -65,7 +79,6 @@ const StyledIcon = styled.a`
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: center;
-    cursor: pointer;
 `;
 
 export const StyledFooterPhone = styled(StyledIcon).attrs({

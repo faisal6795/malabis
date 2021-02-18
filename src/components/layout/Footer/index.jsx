@@ -1,13 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { LanguageContext } from '../../../containers/Language';
-import { StyledFooterContainer, StyledFooterDesc, StyledFooterLogo, StyledFooterPhone, StyledFooterTitle, StyledFooterWhatsapp, StyledLeftContainer, StyledRightContainer, StyledWrapper } from './Footer.styles';
+import logoIcon from '../../../assets/images/logo.svg';
+import { StyledFooterContainer, StyledFooterDesc, StyledFooterLogo, StyledFooterPhone, StyledFooterWhatsapp, StyledLogoContainer, StyledLogoSubtitle, StyledLogoTitle, StyledWrapper } from './Footer.styles';
 
 function Footer() {
 
     const { dictionary } = useContext(LanguageContext);
     const history = useHistory();
     const [footerClass, setFooterClass] = useState(history.location.pathname.toLowerCase().includes('cart') ? 'hide' : '');
+    const title = 'Malabis';
+    const subtitle = 'Collection';
 
     useEffect(() => {
         return history.listen((location) => {
@@ -17,18 +20,18 @@ function Footer() {
 
     return <StyledWrapper className={footerClass} >
         <Link to="/">
-            <StyledFooterLogo />
+            <StyledFooterLogo src={logoIcon} alt={title} />
+            <StyledLogoContainer>
+                <StyledLogoTitle>{title}</StyledLogoTitle>
+                <StyledLogoSubtitle>{subtitle}</StyledLogoSubtitle>
+            </StyledLogoContainer>
         </Link>
         <StyledFooterContainer>
-            <StyledLeftContainer>
-                <StyledFooterTitle>{dictionary.title}</StyledFooterTitle>
-                <StyledFooterDesc>{dictionary.address}</StyledFooterDesc>
-            </StyledLeftContainer>
-            <StyledRightContainer>
-                <StyledFooterPhone />
-                <StyledFooterWhatsapp />
-            </StyledRightContainer>
+            <StyledFooterPhone />
+            <StyledFooterWhatsapp />
         </StyledFooterContainer>
+        <StyledFooterDesc>{dictionary.ownerName}</StyledFooterDesc>
+        <StyledFooterDesc>{dictionary.address}</StyledFooterDesc>
     </StyledWrapper>;
 }
 
