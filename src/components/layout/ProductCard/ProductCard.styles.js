@@ -81,6 +81,7 @@ export const StyledProductImage = styled.div`
 export const StyledProductName = styled.h3`
     margin: 0.5rem 0 0.25rem;
     font-size: 1rem;
+    height: 2.5rem;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;

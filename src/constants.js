@@ -105,7 +105,7 @@ export const HINDI = {
     priceWithSymbol: 'कीमत: ',
     discoverProducts: 'उत्पादों की खोज करें',
     details: 'उत्पाद विवरण',
-    ownerName: 'अबु नासिर अंसारी',
+    ownerName: 'अबू नासिर अंसारी',
     address: 'मुहम्मदाबाद गोहना, मऊ, उत्तर प्रदेश',
     inputTitle: 'उपयोगकर्ता की जानकारी',
     inputFirstname: 'पहला नाम',

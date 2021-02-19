@@ -17,6 +17,7 @@ export const StyledProductName = styled.h2`
 
     @media only screen and (min-width: 1024px) {
         margin-left: 48vw;
+        height: 6rem;
     }
 `;
 
@@ -26,7 +27,7 @@ export const StyledProductContainer = styled.div`
         display: inline-block;
         vertical-align: top;
         width: 40vw;
-        margin-top: 2rem;
+        margin-top: 1rem;
         padding-left: 10%;
     }
 `;

@@ -11,6 +11,8 @@
 
 * {
   box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 ::-webkit-scrollbar {
@@ -20,15 +22,10 @@
 
 body {
   margin: 0;
-  user-select: none;
   min-width: 360px;
   font-family: "Mulish", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 button,

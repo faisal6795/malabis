@@ -17,7 +17,7 @@ export const StyledSlideshowWrapper = styled.div`
     
     @media only screen and (min-width: 1024px) {
         display: inline-block;
-        margin-top: -1.75rem;
+        margin-top: -6rem;
     }
 `;
 
@@ -25,6 +25,7 @@ export const StyledImagesContainer = styled.div`
     width: 100%;
     height: 130vw;
     padding-bottom: 1.5rem;
+    cursor: grab;
 
     @media only screen and (min-width: 1024px) {
         width: 40vw;

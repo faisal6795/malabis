@@ -25,7 +25,6 @@ export const StyledViewAll = styled.span`
 `;
 
 export const StyledSuggestionsContainer = styled.div`
-    height: 8.5rem;
     overflow-x: auto;
     white-space: nowrap;
     padding: 1rem;
@@ -34,6 +33,5 @@ export const StyledSuggestionsContainer = styled.div`
     @media only screen and (min-width: 1024px) {
         margin: 0 -10vw;
         padding: 2rem 10vw;
-        height: 11rem;
     }
 `;
