@@ -37,7 +37,7 @@ export const StyledSuggestionContainer = styled.div`
     flex-flow: column wrap;
 `;
 
-export const StyledSuggestionTitle = styled.h6`
+export const StyledSuggestionTitle = styled.h5`
     font-size: 0.75rem;
     font-weight: bold;
     margin: 0 0 0.25rem;

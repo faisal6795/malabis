@@ -10,7 +10,7 @@ export const StyledSuggestionsWrapper = styled.div`
     }
 `;
 
-export const StyledSuggestionsHeading = styled.h5`
+export const StyledSuggestionsHeading = styled.h4`
     margin: 0;
     display: inline-block;
     font-size: 18px;

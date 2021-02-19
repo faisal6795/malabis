@@ -48,8 +48,8 @@ function Favourites() {
     return <StyledFavouritesWrapper>
         <StyledFavouritesName>{dictionary.favouritesTitle}</StyledFavouritesName>
         <StyledFavouritesCardContainer>{getFavouritesList()}</StyledFavouritesCardContainer>
-        <Suggestions title={dictionary.suggestionsTitle} />
         <EmptyState image={emptyImage} title={dictionary.emptyFavouritesTitle} text={dictionary.emptyFavouritesText} customClass={productData.length ? 'hide' : ''} />
+        <Suggestions title={dictionary.suggestionsTitle} />
     </StyledFavouritesWrapper>
 }
 
