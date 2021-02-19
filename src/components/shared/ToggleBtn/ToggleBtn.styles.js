@@ -16,7 +16,8 @@ export const StyledToggleText = styled.span`
 `;
 
 export const StyledToggleInput = styled.input.attrs({
-    type: "checkbox"
+    type: "checkbox",
+    title: "Toggle",
 })`
     width: 0;
     height: 0;

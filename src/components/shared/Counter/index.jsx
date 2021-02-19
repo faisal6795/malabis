@@ -26,9 +26,9 @@ function Counter({ isRetail, changeEvent, label, presetValue, customClass }) {
 
     return <StyledCounterWrapper className={customClass}>
         {label && <StyledCounterLabel>{label}</StyledCounterLabel>}
-        <StyledDecrementBtn onClick={decrementEvent} />
+        <StyledDecrementBtn onClick={decrementEvent} title='Decrease' />
         <StyledCounterValue>{value}</StyledCounterValue>
-        <StyledIncrementBtn onClick={incrementEvent} />
+        <StyledIncrementBtn onClick={incrementEvent} title='Increase' />
     </StyledCounterWrapper>
 }
 

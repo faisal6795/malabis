@@ -29,7 +29,7 @@ function Search({ searchValue }) {
 
     return <StyledWrapper>
         <StyledSearchIcon />
-        <StyledSearchInput placeholder={dictionary.search} onChange={changeEvent} onFocus={onFocus} onMouseUp={onMouseUp} />
+        <StyledSearchInput placeholder={dictionary.search} title={dictionary.search} onChange={changeEvent} onFocus={onFocus} onMouseUp={onMouseUp} />
         {searchText && <StyledClearIcon onClick={clearText} />}
     </StyledWrapper>
 }

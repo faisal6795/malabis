@@ -82,7 +82,8 @@ const StyledIcon = styled.a`
 `;
 
 export const StyledFooterPhone = styled(StyledIcon).attrs({
-    href: "tel:+91" + DATA.phone
+    href: "tel:+91" + DATA.phone,
+    title: 'Phone'
 })`
     margin-right: 1rem;
     background-image: url(${phoneIcon});
@@ -90,6 +91,7 @@ export const StyledFooterPhone = styled(StyledIcon).attrs({
 
 export const StyledFooterWhatsapp = styled(StyledIcon).attrs({
     href: DATA.whatsappLink + DATA.phone,
+    title: 'Whatsapp',
     rel: "noopener noreferrer",
     target: "_blank"
 })`

@@ -21,7 +21,7 @@ function Footer() {
 
     return <StyledWrapper className={footerClass} >
         <Link to="/">
-            <StyledFooterLogo src={logoIcon} alt={title} />
+            <StyledFooterLogo src={logoIcon} alt={title} width='80' height='80' />
             <StyledLogoContainer>
                 <StyledLogoTitle>{title}</StyledLogoTitle>
                 <StyledLogoSubtitle>{subtitle}</StyledLogoSubtitle>

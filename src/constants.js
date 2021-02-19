@@ -30,7 +30,7 @@ import yellowTanchui2 from './assets/images/products/yellow-tanchui-2.jpg';
 export const COLORS = {
     text: "#222222",
     grey: "#DDDDDD",
-    primary: "#6C63FF",
+    primary: "#675ef8",
     secondary: "#574fcb",
     like: "#FF3366",
     accent: '#EDEDF4',

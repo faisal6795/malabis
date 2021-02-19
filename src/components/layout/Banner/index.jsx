@@ -12,7 +12,7 @@ function Banner() {
     return <StyledBannerWrapper>
         <StyledBannerImage src={bannerImage} alt={bannerAltText} />
         <StyledBannerLogoContainer>
-            <StyledBannerLogo src={logoImg} alt={title} />
+            <StyledBannerLogo src={logoImg} alt={title} width='100' height='100' />
             <StyledBannerLogoTitle>{title}</StyledBannerLogoTitle>
             <StyledBannerLogoSubtitle>{subtitle}</StyledBannerLogoSubtitle>
         </StyledBannerLogoContainer>

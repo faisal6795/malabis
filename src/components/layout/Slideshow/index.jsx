@@ -34,7 +34,7 @@ function Slideshow({ id, imageList, isFav }) {
             <StyledSwiperWrapper className='swiper-wrapper'>{getImages()}</StyledSwiperWrapper>
             <StyledPagination className='swiper-pagination' />
         </StyledImagesContainer>
-        <ImgBtn clickEvent={favouriteClicked} imgUrl={isFav ? heartFillIcon : heartIcon} customClass='fav-btn' />
+        <ImgBtn clickEvent={favouriteClicked} imgUrl={isFav ? heartFillIcon : heartIcon} title='Set Favourite' customClass='fav-btn' />
     </StyledSlideshowWrapper>
 }
 

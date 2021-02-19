@@ -22,12 +22,12 @@ function Navbar() {
             <StyledLogo>{brandName}</StyledLogo>
         </Link>
         <StyledRightContainer>
-            <StyledLanguage onClick={switchLanguage} className={isEnglish ? 'english' : ''}>A</StyledLanguage>
+            <StyledLanguage onClick={switchLanguage} className={isEnglish ? 'english' : ''} title='Language' >A</StyledLanguage>
             <Link to="/favourites">
-                <StyledFavourite />
+                <StyledFavourite title='Favourites' />
             </Link>
             <Link to="/cart">
-                <StyledCart>{count > 0 && <StyledCartCounter>{count}</StyledCartCounter>}</StyledCart>
+                <StyledCart title='Cart' >{count > 0 && <StyledCartCounter>{count}</StyledCartCounter>}</StyledCart>
             </Link>
         </StyledRightContainer>
     </StyledNavbarWrapper>

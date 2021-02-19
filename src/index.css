@@ -1,11 +1,13 @@
 @font-face {
   font-family: "Mulish";
+  font-display: swap;
   src: local("Mulish"), url(./assets/fonts/Mulish-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Mulish";
   font-weight: bold;
+  font-display: swap;
   src: local("Mulish"), url(./assets/fonts/Mulish-Bold.ttf) format("truetype");
 }
 

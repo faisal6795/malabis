@@ -21,12 +21,12 @@ function ProductCard({ data, setCurrentProduct, setFav, addToCart, isInFavPage, 
 
     return <StyledProductContainer>
         {isInFavPage ?
-            <ImgBtn clickEvent={() => { removeProduct(id) }} imgUrl={crossIcon} customClass='remove-icon' /> :
+            <ImgBtn clickEvent={() => { removeProduct(id) }} imgUrl={crossIcon} title='Remove' customClass='remove-icon' /> :
             <>
                 <StyledHeart id={productId} onChange={changeEvent} checked={isFavourite} />
-                <StyledLabel htmlFor={productId} />
+                <StyledLabel htmlFor={productId} title='Add to favourites' />
             </>}
-        <Link to="/product" onClick={() => { setCurrentProduct(id) }}>
+        <Link to="/product" title='product' onClick={() => { setCurrentProduct(id) }}>
             <StyledProductImage image={images[0]}></StyledProductImage>
         </Link>
         <StyledProductName>{name}</StyledProductName>
