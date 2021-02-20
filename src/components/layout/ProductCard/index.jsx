@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import Button from '../../shared/Button';
 import ImgBtn from '../../shared/ImgBtn';
 import { StyledHeart, StyledLabel, StyledProductContainer, StyledProductImage, StyledProductName, StyledProductOriginal, StyledProductPrice } from './ProductCard.styles';
@@ -10,7 +11,7 @@ import { LanguageContext } from '../../../containers/Language';
 function ProductCard({ data, setCurrentProduct, setFav, addToCart, isInFavPage, removeProduct }) {
 
     const { dictionary } = useContext(LanguageContext);
-    const productId = 'fav-' + +new Date();
+    const productId = uuidv4();
     const { id, images, name, price, original, isFav, isCart } = data;
     const [isFavourite, setFavourite] = useState(isFav);
 

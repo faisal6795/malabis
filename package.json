@@ -15,7 +15,8 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "styled-components": "^5.1.0",
-    "swiper": "^6.4.11"
+    "swiper": "^6.4.11",
+    "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
