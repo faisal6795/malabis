@@ -12,7 +12,7 @@ function EmptyState({ title, text, image, customClass }) {
         <StyledEmptyImage src={image} alt={text} />
         <StyledEmptyTitle>{title}</StyledEmptyTitle>
         <StyledEmptyText>{text}</StyledEmptyText>
-        <Link to='/'>
+        <Link to={`${process.env.PUBLIC_URL}/`}>
             <Button clickEvent={() => { }} text={dictionary.discoverProducts} customClass='discover-btn btn' />
         </Link>
     </StyledEmptyWrapper>

@@ -27,7 +27,7 @@ function Suggestions({ title }) {
 
     return <StyledSuggestionsWrapper>
         <StyledSuggestionsHeading>{title}</StyledSuggestionsHeading>
-        <Link to='/'>
+        <Link to={`${process.env.PUBLIC_URL}/`}>
             <StyledViewAll>{dictionary.viewAll}</StyledViewAll>
         </Link>
         <StyledSuggestionsContainer>{getSuggestionCards()}</StyledSuggestionsContainer>

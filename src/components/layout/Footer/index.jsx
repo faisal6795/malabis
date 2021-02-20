@@ -20,7 +20,7 @@ function Footer() {
     }, [history]);
 
     return <StyledWrapper className={footerClass} >
-        <Link to="/">
+        <Link to={`${process.env.PUBLIC_URL}/`}>
             <StyledFooterLogo src={logoIcon} alt={title} width='80' height='80' />
             <StyledLogoContainer>
                 <StyledLogoTitle>{title}</StyledLogoTitle>

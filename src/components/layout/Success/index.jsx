@@ -19,7 +19,7 @@ function Success() {
         <StyledBottomContainer>
             <StyledBottomMessage>{dictionary.orderMessage}</StyledBottomMessage>
             <StyledBottomContact href={'tel:+91' + DATA.phone}>{contact}</StyledBottomContact>
-            <Link to='/'>
+            <Link to={`${process.env.PUBLIC_URL}/`}>
                 <Button text={dictionary.continueShopping} clickEvent={() => { }} customClass='btn' />
             </Link>
         </StyledBottomContainer>

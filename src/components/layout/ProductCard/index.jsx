@@ -26,7 +26,7 @@ function ProductCard({ data, setCurrentProduct, setFav, addToCart, isInFavPage, 
                 <StyledHeart id={productId} onChange={changeEvent} checked={isFavourite} />
                 <StyledLabel htmlFor={productId} title='Add to favourites' />
             </>}
-        <Link to="/product" title='product' onClick={() => { setCurrentProduct(id) }}>
+        <Link to={`${process.env.PUBLIC_URL}/product`} title='product' onClick={() => { setCurrentProduct(id) }}>
             <StyledProductImage image={images[0]}></StyledProductImage>
         </Link>
         <StyledProductName>{name}</StyledProductName>

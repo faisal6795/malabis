@@ -17,7 +17,7 @@ function SuggestionCard({ id, name, images, price }) {
     }
 
     return <StyledSuggestionCardWrapper>
-        <Link to='/product' onClick={setCurrentProduct}>
+        <Link to={`${process.env.PUBLIC_URL}/product`} onClick={setCurrentProduct}>
             <StyledSuggestionImage image={images[0]} />
             <StyledSuggestionContainer>
                 <StyledSuggestionTitle>{name}</StyledSuggestionTitle>

@@ -13,10 +13,10 @@ function App() {
 		<LanguageProvider>
 			<Navbar />
 			<Switch>
-				<Route path="/" component={Home} exact />
-				<Route path="/product" component={Product} exact />
-				<Route path="/favourites" component={Favourites} exact />
-				<Route path="/cart" component={Cart} exact />
+				<Route path={`${process.env.PUBLIC_URL}/`} component={Home} exact />
+				<Route path={`${process.env.PUBLIC_URL}/product`} component={Product} exact />
+				<Route path={`${process.env.PUBLIC_URL}/favourites`} component={Favourites} exact />
+				<Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart} exact />
 			</Switch>
 			<Footer />
 		</LanguageProvider>

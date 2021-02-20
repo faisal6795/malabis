@@ -18,15 +18,15 @@ function Navbar() {
     }
 
     return <StyledNavbarWrapper >
-        <Link to="/">
+        <Link to={`${process.env.PUBLIC_URL}/`}>
             <StyledLogo>{brandName}</StyledLogo>
         </Link>
         <StyledRightContainer>
             <StyledLanguage onClick={switchLanguage} className={isEnglish ? 'english' : ''} title='Language' >A</StyledLanguage>
-            <Link to="/favourites">
+            <Link to={`${process.env.PUBLIC_URL}/favourites`}>
                 <StyledFavourite title='Favourites' />
             </Link>
-            <Link to="/cart">
+            <Link to={`${process.env.PUBLIC_URL}/cart`}>
                 <StyledCart title='Cart' >{count > 0 && <StyledCartCounter>{count}</StyledCartCounter>}</StyledCart>
             </Link>
         </StyledRightContainer>

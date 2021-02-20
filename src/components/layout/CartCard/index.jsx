@@ -29,7 +29,7 @@ function CartCard({ id, name, price, images, quantity }) {
     }
 
     return <StyledCartCardWrapper>
-        <Link to='/product' title='product'>
+        <Link to={`${process.env.PUBLIC_URL}/product`} title='product'>
             <StyledCartCardImage image={images[0]} onClick={setCurrentProduct} />
         </Link>
         <StyledCartCardRightContainer>
