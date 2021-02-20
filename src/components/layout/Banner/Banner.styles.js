@@ -20,15 +20,15 @@ export const StyledBannerLogoContainer = styled.div`
     color: #fff;
 `;
 
-export const StyledBannerLogoTitle = styled.span`
-    display: block;
+export const StyledBannerLogoTitle = styled.h2`
+    margin: 0;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 6px;
     font-size: 1.875rem;
 `;
 
 export const StyledBannerLogoSubtitle = styled.span`
-    letter-spacing: 5px;
+    letter-spacing: 8px;
     margin-top: -0.125rem;
 `;
 
