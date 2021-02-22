@@ -124,7 +124,7 @@ export const HINDI = {
     emptyCartText: 'आपका कर्ट खाली है',
     favouritesTitle: 'पसंदीदा',
     suggestionsTitle: 'आपके पसंदीदा से प्रेरित',
-    emptyFavouritesTitle: 'अब तक कोइ पसंदीदा नहीं',
+    emptyFavouritesTitle: 'अब तक कोई पसंदीदा नहीं',
     emptyFavouritesText: 'लगता है कि आपने अभी तक अपने \nपसंदीदा में कोई उत्पाद नहीं डाला है',
     wholesale: 'थोक',
     retail: 'खुदरा',
