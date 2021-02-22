@@ -8,6 +8,7 @@ export const StyledEmptyWrapper = styled.div`
     right: 0;
     bottom: 0;
     z-index: 1;
+    overflow: auto;
     background: #fff;
     text-align: center;
     padding: 5rem 1rem;
