@@ -29,10 +29,10 @@ function ProductCard({ data, setCurrentProduct, setFav, addToCart, isInFavPage, 
             </>}
         <Link to={`${process.env.PUBLIC_URL}/product`} title='product' onClick={() => { setCurrentProduct(id) }}>
             <StyledProductImage image={images[0]}></StyledProductImage>
+            <StyledProductName>{name}</StyledProductName>
+            <StyledProductPrice>{new Intl.NumberFormat('en-IN').format(price)}</StyledProductPrice>
+            <StyledProductOriginal>{new Intl.NumberFormat('en-IN').format(original)}</StyledProductOriginal>
         </Link>
-        <StyledProductName>{name}</StyledProductName>
-        <StyledProductPrice>{new Intl.NumberFormat('en-IN').format(price)}</StyledProductPrice>
-        <StyledProductOriginal>{new Intl.NumberFormat('en-IN').format(original)}</StyledProductOriginal>
         {isInFavPage &&
             <Button text={isCart ? dictionary.addedToCart : dictionary.addToCart}
                 clickEvent={() => { addToCart(id) }}

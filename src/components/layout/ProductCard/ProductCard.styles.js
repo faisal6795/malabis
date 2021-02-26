@@ -14,6 +14,7 @@ export const StyledProductContainer = styled.div`
     a {
         text-decoration: none;
         display: block;
+        color: inherit;
     }
 
     .add-btn {        
