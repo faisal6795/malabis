@@ -21,7 +21,7 @@ function SuggestionCard({ id, name, images, price }) {
             <StyledSuggestionImage image={images[0]} />
             <StyledSuggestionContainer>
                 <StyledSuggestionTitle>{name}</StyledSuggestionTitle>
-                <StyledSuggestionPrice>{price}</StyledSuggestionPrice>
+                <StyledSuggestionPrice>{new Intl.NumberFormat('en-IN').format(price)}</StyledSuggestionPrice>
             </StyledSuggestionContainer>
         </Link>
     </StyledSuggestionCardWrapper>

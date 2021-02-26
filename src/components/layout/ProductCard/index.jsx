@@ -31,8 +31,8 @@ function ProductCard({ data, setCurrentProduct, setFav, addToCart, isInFavPage, 
             <StyledProductImage image={images[0]}></StyledProductImage>
         </Link>
         <StyledProductName>{name}</StyledProductName>
-        <StyledProductPrice>{price}</StyledProductPrice>
-        <StyledProductOriginal>{original}</StyledProductOriginal>
+        <StyledProductPrice>{new Intl.NumberFormat('en-IN').format(price)}</StyledProductPrice>
+        <StyledProductOriginal>{new Intl.NumberFormat('en-IN').format(original)}</StyledProductOriginal>
         {isInFavPage &&
             <Button text={isCart ? dictionary.addedToCart : dictionary.addToCart}
                 clickEvent={() => { addToCart(id) }}

@@ -45,7 +45,7 @@ function Product() {
         <Slideshow id={id} imageList={images} isFav={isFav} />
         <StyledProductContainer>
             <StyledSmallWrapper>
-                <StyledProductPrice>{price}</StyledProductPrice>
+                <StyledProductPrice>{new Intl.NumberFormat('en-IN').format(price)}</StyledProductPrice>
                 <ToggleBtn isRetail={quantity % 100 ? true : false}
                     changeEvent={changeToggleBtn}
                     leftText={dictionary.wholesale}
@@ -53,7 +53,7 @@ function Product() {
                 />
             </StyledSmallWrapper>
             <StyledSmallWrapper>
-                <StyledOriginalPrice price={dictionary.priceWithSymbol}>{original}</StyledOriginalPrice>
+                <StyledOriginalPrice price={dictionary.priceWithSymbol}>{new Intl.NumberFormat('en-IN').format(original)}</StyledOriginalPrice>
                 <Counter label={dictionary.quantity}
                     changeEvent={onCounterChange}
                     isRetail={isRetail}
