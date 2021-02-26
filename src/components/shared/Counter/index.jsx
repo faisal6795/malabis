@@ -8,8 +8,8 @@ function Counter({ isRetail, changeEvent, label, presetValue, customClass }) {
     const [value, setValue] = useState(presetValue);
 
     useEffect(() => {
-        setValue(presetValue || (isRetail ? 1 : big));
-    }, [isRetail, presetValue]);
+        setValue(presetValue);
+    }, [presetValue]);
 
     function decrementEvent() {
         let temp = isRetail ? value - 1 : value - big;

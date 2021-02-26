@@ -5,10 +5,10 @@ import { StyledToggleWrapper, StyledToggleInput, StyledToggleLabel, StyledToggle
 
 const id = uuidv4();
 
-function ToggleBtn({ leftText, rightText, isRetail, changeEvent, customClass }) {
+function ToggleBtn({ leftText, rightText, isChecked, changeEvent, customClass }) {
     return <StyledToggleWrapper>
         <StyledToggleText>{leftText}</StyledToggleText>
-        <StyledToggleInput id={id} onChange={changeEvent} className={customClass} checked={isRetail} />
+        <StyledToggleInput id={id} onChange={changeEvent} className={customClass} checked={isChecked} />
         <StyledToggleLabel htmlFor={id}></StyledToggleLabel>
         <StyledToggleText>{rightText}</StyledToggleText>
     </StyledToggleWrapper>
@@ -17,7 +17,7 @@ function ToggleBtn({ leftText, rightText, isRetail, changeEvent, customClass }) 
 ToggleBtn.propTypes = {
     leftText: PropTypes.string.isRequired,
     rightText: PropTypes.string.isRequired,
-    isRetail: PropTypes.bool.isRequired,
+    isChecked: PropTypes.bool.isRequired,
     changeEvent: PropTypes.func.isRequired,
     customClass: PropTypes.string,
 }

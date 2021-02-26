@@ -35,7 +35,7 @@ function CartCard({ id, name, price, images, quantity }) {
         <StyledCartCardRightContainer>
             <StyledCartCardTitle>{name}</StyledCartCardTitle>
             <StyledCartCardPrice>{new Intl.NumberFormat('en-IN').format(price)}</StyledCartCardPrice>
-            <Counter changeEvent={updateQuantity} isRetail={quantity % 100 ? true : false} presetValue={quantity} />
+            <Counter changeEvent={updateQuantity} isRetail={Boolean(quantity % 100)} presetValue={quantity} />
         </StyledCartCardRightContainer>
     </StyledCartCardWrapper>;
 }

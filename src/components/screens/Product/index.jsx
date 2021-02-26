@@ -31,12 +31,20 @@ function Product() {
             type: ACTION.CHANGE_QUANTITY,
             value: { id, quantity }
         });
+        quantity === 0 && dispatch({
+            type: ACTION.ADD_TO_CART,
+            value: { id, isCart: false }
+        });
     }
 
     function addToCart() {
         dispatch({
             type: ACTION.ADD_TO_CART,
             value: { id, isCart: true }
+        });
+        quantity === 0 && dispatch({
+            type: ACTION.CHANGE_QUANTITY,
+            value: { id, quantity: isRetail ? 1 : 100 }
         });
     }
 
@@ -46,7 +54,7 @@ function Product() {
         <StyledProductContainer>
             <StyledSmallWrapper>
                 <StyledProductPrice>{new Intl.NumberFormat('en-IN').format(price)}</StyledProductPrice>
-                <ToggleBtn isRetail={quantity % 100 ? true : false}
+                <ToggleBtn isChecked={isRetail}
                     changeEvent={changeToggleBtn}
                     leftText={dictionary.wholesale}
                     rightText={dictionary.retail}
