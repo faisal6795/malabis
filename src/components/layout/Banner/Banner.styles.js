@@ -32,12 +32,11 @@ export const StyledBannerLogoSubtitle = styled.span`
     margin-top: -0.125rem;
 `;
 
-export const StyledBannerImage = styled.img`
+export const StyledBannerImage = styled.div`
     width: 100%;
+    height: 24rem;
     border-radius: 1rem;
+    background: url(${props => props.bg}) no-repeat center;
+    background-size: cover;
     filter: brightness(0.8);
-
-    @media only screen and (min-width: 1024px) {
-        height: 24rem;
-    }
 `;
