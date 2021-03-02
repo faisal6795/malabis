@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Button from '../../shared/Button';
 import Banner from '../../layout/Banner';
 import Search from '../../layout/Search';
 import ProductCard from '../../layout/ProductCard';
@@ -11,10 +12,12 @@ import { LanguageContext } from '../../../containers/Language';
 
 function Home() {
 
+    const count = 8;
     const { dictionary } = useContext(LanguageContext);
     const productsData = useSelector(state => state.products);
     const dispatch = useDispatch();
     const [productsToShow, setProductsToShow] = useState(productsData);
+    const [productCount, setProductCount] = useState(count);
     const [searchText, setSearchText] = useState('');
 
     function addToFavourites(id, checked) {
@@ -25,7 +28,7 @@ function Home() {
     }
 
     function searchValue(value) {
-        const products = productsData.filter(item => item.name.toLowerCase().includes(value));
+        const products = productsData.filter(item => item.name.toLowerCase().includes(value.toLowerCase()));
         setSearchText(value);
         setProductsToShow(products);
     }
@@ -38,14 +41,24 @@ function Home() {
     }
 
     function getProductList() {
-        return productsToShow.map(product =>
+        return productsToShow.slice(0, productCount).map(product =>
             <ProductCard key={product.id} data={product} setFav={addToFavourites} setCurrentProduct={setCurrentProduct} />);
+    }
+
+    function loadMore() {
+        setProductCount(productCount + count);
     }
 
     return <HomeWrapper>
         <Search searchValue={searchValue} />
         {!searchText && <Banner />}
-        {productsToShow.length ? <ProductWrapper>{getProductList()}</ProductWrapper> : <EmptyState image={noResults} title={dictionary.noResults} text={dictionary.noResultsDesc} customClass='no-results' />}
+        {productsToShow.length ?
+            <>
+                <ProductWrapper>{getProductList()}</ProductWrapper>
+                {productCount < productsToShow.length && <Button clickEvent={loadMore} customClass='btn' text={dictionary.loadMore} />}
+            </> :
+            <EmptyState image={noResults} title={dictionary.noResults} text={dictionary.noResultsDesc} customClass='no-results' />
+        }
     </HomeWrapper>
 }
 
